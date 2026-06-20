@@ -1,0 +1,15 @@
+{
+	"name": "bantiadf",
+	"properties": {
+		"trustModeClaimForMi": {
+			"value": "Disabled",
+			"editable": true
+		}
+	},
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "0147fc29-67c1-4229-a96b-83a34af2d744",
+		"tenantId": "0d157213-7e6a-42c3-9c31-03714c128e84"
+	}
+}
