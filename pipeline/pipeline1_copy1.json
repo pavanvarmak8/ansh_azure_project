@@ -8,6 +8,11 @@
 				"dependsOn": [],
 				"userProperties": [],
 				"typeProperties": {
+					"items": {
+						"value": "@pipeline().parameters.loop_input",
+						"type": "Expression"
+					},
+					"isSequential": true,
 					"activities": [
 						{
 							"name": "Lookup",
@@ -180,10 +185,13 @@
 												"parameters": {
 													"p_cont": "bronze",
 													"p_dir": {
-														"value": "@pipeline().parameters.p_table",
+														"value": "@item().table",
 														"type": "Expression"
 													},
-													"p_file": "@concat(pipeline().parameters.p_table, '_', variables('current'))"
+													"p_file": {
+														"value": "@concat(item().table, '_', variables('current'))",
+														"type": "Expression"
+													}
 												}
 											},
 											"enableLogging": false,
